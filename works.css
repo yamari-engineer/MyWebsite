@@ -1,0 +1,274 @@
+﻿@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:serif;
+}
+
+body {
+    position: relative;
+    flex-flow:wrap;
+    width: 100%;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.works {
+    position:relative;
+    height: 100vh;
+    background-image:url('img/works.JPG');
+    background-repeat:no-repeat;
+    background-size:cover;
+    overflow:hidden;
+}
+
+.works-header {
+    margin: .75rem;
+    display:flex;
+    justify-content:space-between;
+}
+
+.works-header a {
+    color: silver;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.works-child {
+    position:relative;
+    height: 100%;
+    margin: 0 .75rem .75rem .75rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.works-grandchild-block {
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    transition: all 1.5s ease-in-out;
+}
+
+.works-grandchild-block.active {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+
+.works-grandchild-block h1 {
+    text-indent: 20px;
+    letter-spacing: 20px;
+    font-size: 30px;
+    margin-bottom:1.5rem;
+}
+
+.works-grandchild-block a {
+    padding: .5rem .75rem;
+    padding-left: 1.25rem;
+    background-color: rgba(225,225,225,.5);
+    font-size: 20px;
+    border: 2px solid silver;
+    text-indent: 5px;
+    letter-spacing: 5px;
+}
+
+/*moreを押し時のデザイン*/
+.close {
+    position: absolute;
+    top: .9rem;
+    right: 1rem;
+    width: 35px;
+    height: 45px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.close div {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20%;
+    z-index: 10;
+}
+
+.close div:nth-of-type(1) {
+    transform: translateY(50%) rotate(45deg);
+}
+
+.close div:nth-of-type(2) {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.works-more {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(225,225,225,.9);
+    overflow: hidden;
+    font-family: serif;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+    transform: translateY(100vh);
+    /*    overflow:hidden;*/
+/*    bottom:-1200px;*/
+}
+
+.works-more.active {
+    top: 0;
+    opacity: 1;
+    z-index: 100;
+    transition: all 1s ease-in-out;
+    transform: translate(0);
+}
+
+.more-child-Block {
+    position:relative;
+}
+
+.more-child-Block h2 {
+    margin-top: 1rem;
+    text-align: center;
+    letter-spacing: 20px;
+    font-size: 30px;
+
+}
+
+.more-grandchild-Block {
+    position:relative;
+    height: 100vh;
+    display:flex;
+/*    align-items:center;*/
+    justify-content:center;
+}
+
+.works-group {
+    height:85%;
+    width:90%;
+    margin:1rem 0;
+    background-color:rgba(200,200,200,.8);
+}
+
+.works-group {
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.works-group p {
+    position:absolute;
+    top:40%;
+}
+
+/*ナビゲーション*/
+.navigation {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    z-index: 100;
+}
+
+.nav1, .nav2, .nav3 {
+    position: absolute;
+    border: 2px solid silver;
+    width: 36px;
+    background-color: silver;
+    transition: all .3s ease-in-out;
+}
+
+.nav1 {
+    top: 5px;
+    right: 0;
+}
+
+.nav2 {
+    margin-top: 18px;
+    opacity: 1;
+}
+
+.nav3 {
+    margin-top: 32px;
+    width: 30px;
+    right: 0;
+}
+
+/*ナビゲーションを押した時の挙動*/
+.nav1.active {
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 40px;
+    transform: translateY(20px) rotate(45deg);
+    transition: all .3s ease-in-out;
+}
+
+.nav2.active {
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+.nav3.active {
+    margin: 0;
+    bottom: 0;
+    width: 40px;
+    transform: translateY(-15px) rotate(-45deg);
+    transition: all .3s ease-in-out;
+}
+
+/*ナビゲーション出現*/
+.navigation-menu {
+    opacity: 0;
+    transition: all 10s ease-in-out;
+}
+
+
+.navigation-menu.active {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transition: all .3s ease-in-out;
+}
+
+.nav.active {
+    position: relative;
+    opacity: 1;
+    color: inherit;
+    line-height: 70px;
+    bottom: 3rem;
+    text-align: center;
+}
+
+.nav h1 {
+    font-size: 1.75rem;
+}
+
+.nav-child a {
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+﻿@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: serif;
+}
+
+body {
+    position: relative;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contact {
+    position: relative;
+    height: 100vh;
+    background-image: url('img/works.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.contact-header {
+    margin: .75rem;
+    display:flex;
+    justify-content:space-between;
+}
+
+.contact-header a {
+    color: silver;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.contact-child {
+    position: relative;
+    height: 100%;
+    margin: 1.75rem 1.5rem 0 1.5rem;
+}
+
+.contact-grandchild-block {
+    height:100%;
+    position:absolute;
+    top:1.5rem;
+    margin:0 2rem;
+}
+
+.contact-grandchild-block h2 {
+    margin: 1rem 0 1.5rem 0;
+    text-align:center;
+    letter-spacing: .5rem;
+}
+
+.contact-grandchild-block p {
+    font-size:.85rem;
+}
+
+.form {
+    position:relative;
+    margin: 2.5rem 1rem 0 1rem;
+}
+
+.form input,.form textarea {
+    width:100%;
+    border-radius:5%;
+    border:2px solid silver;
+
+}
+
+.form p {
+    margin: 1.5rem 0 .25rem 0;
+}
+
+/*ナビゲーション*/
+.navigation {
+    position:relative;
+    height:40px;
+    width:40px;
+    z-index:100;
+}
+
+.nav1, .nav2, .nav3 {
+    position: absolute;
+    border: 2px solid silver;
+    width: 36px;
+    background-color: silver;
+    transition: all .3s ease-in-out;
+}
+
+.nav1 {
+/*    margin-top: 5px;*/
+    top: 5px;
+    right: 0;
+}
+
+.nav2 {
+    margin-top: 18px;
+    opacity:1;
+}
+
+.nav3 {
+    margin-top: 32px;
+    width: 30px;
+    right: 0;
+/*    bottom: 15px;*/
+}
+
+/*ナビゲーションを押した時の挙動*/
+.nav1.active {
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 40px;
+    transform: translateY(20px) rotate(45deg);
+    transition:all .3s ease-in-out;
+}
+
+.nav2.active {
+    opacity:0;
+    transition: all .2s ease-in-out;
+}
+
+.nav3.active {
+    margin: 0;
+    bottom: 0;
+    width: 40px;
+    transform: translateY(-15px) rotate(-45deg);
+    transition: all .3s ease-in-out;
+}
+
+/*ナビゲーション出現*/
+.navigation-menu {
+    opacity: 0;
+    transition: all 10s ease-in-out;
+}
+
+
+.navigation-menu.active {
+    position: absolute;
+    opacity:1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transition: all .3s ease-in-out;
+}
+
+.nav.active {
+    position:relative;
+    opacity:1;
+    color:inherit;
+    line-height:70px;
+    bottom:3rem;
+    text-align:center;
+}
+
+.nav h1 {
+    font-size:1.75rem;
+}
+
+.nav-child a {
+    color:inherit;
+    font-size:1.2rem;
+}
+
+
+
+
+
+
+
+

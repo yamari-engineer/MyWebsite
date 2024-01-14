@@ -1,0 +1,238 @@
+﻿@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    list-style:none;
+}
+
+body {
+    position:relative;
+    width:100%;
+}
+
+main {
+    position: relative;
+    max-height: 200vh;
+    overflow: hidden;
+}
+
+/*スマホ対応-----------------*/
+
+.top {
+    position:relative;
+    height: 100vh;
+    background-image: url("img/nakameguro.JPG");
+    background-position: 40% 40%;
+    background-size:350%;
+}
+
+.msk {
+    height:100vh;
+    background-color:rgba(50,50,50,.5);
+/*    background-color:rgba(255,255,255,.4);*/
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+}
+
+.top-title {
+    position:absolute;
+    top: 8%;
+    text-align:center;
+    font-family:serif;
+    color:silver;
+    letter-spacing:3px;
+}
+
+.top-title p {
+    font-size: 1rem;
+}
+
+.nav {
+    display:flex;
+    justify-content:space-evenly;
+    width:100%;
+}
+
+.nav a {
+    color:inherit;
+}
+
+
+/*about--------------*/
+.msk1 {
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    overflow:hidden;
+}
+
+.about {
+    position:relative;
+    background-image: url("img/toyotamuseam.JPG");
+    background-size: 450%;
+    background-position: 30% 0%;
+    overflow:hidden;
+}
+
+.about-child-Block {
+    position:relative;
+    height:100%;
+    margin:.75rem;
+    font-family:serif;
+    color:silver;
+}
+
+.about-child-Block a {
+    position:relative;
+    font-size: 20px;
+    letter-spacing:5px;
+    z-index: 20;
+    color:inherit;
+}
+
+.about-grandchild-Block {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-flow:column;
+    margin: 1rem;
+    align-items:center;
+    justify-content:center;
+    bottom:7rem;
+    color:white;
+    z-index:10;
+    transition:all 1.5s ease-in-out;
+}
+
+.about-grandchild-Block.active {
+    opacity:0;
+    transition:all .5s ease-in-out;
+}
+
+.about-grandchild-Block h2 {
+    text-align:center;
+    width:100%;
+    text-indent:20px;
+    letter-spacing:20px;
+    font-size:30px;
+}
+
+.about-grandchild-Block a {
+    margin-top:1.5rem;
+    padding:.25rem 1rem;
+    background-color:rgba(225,225,225,.5);
+    font-size:17.5px;
+    border: 2px solid white;
+    text-indent:5px;
+}
+
+/*moreを押し時のデザイン*/
+.close {
+    position:absolute;
+    top:.9rem;
+    right:1rem;
+    width:35px;
+    height:45px;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+}
+
+.close div {
+    position:relative;
+    border:1px solid black;
+    border-radius:20%;
+    z-index:10;
+}
+
+.close div:nth-of-type(1) {
+    transform: translateY(50%) rotate(45deg);
+}
+
+.close div:nth-of-type(2) {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.profile-more {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(225,225,225,.9);
+    overflow: hidden;
+    font-family: serif;
+    z-index: -1;
+    transition: all .8s ease-in-out;
+    transform: translateY(100vh);
+    /*    overflow:hidden;*/
+    /*    bottom:-1200px;*/
+}
+
+.profile-more.active {
+    top:0;
+    opacity: 1;
+    z-index:100;
+    transition:all 1s ease-in-out;
+    transform:translate(0);
+}
+
+
+
+.more-child-Block {
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-flow:column;
+}
+
+.profile-more h2 {
+    margin-top:1rem;
+    text-align:center;
+    letter-spacing:20px;
+    font-size:30px;
+}
+
+.more-grandchild-Block {
+    margin: 10% 10%;
+}
+
+.more-grandchild-Block div {
+    margin-bottom:3rem;
+    line-height: 2rem;
+}
+
+.ja p:first-child, .en p:first-child,.sns1 {
+    font-weight: bold;
+}
+
+.sns-child-Block {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sns-child-Block div {
+    width:100%;
+    text-align:center;
+}
+
+.sns-child-Block img {
+    margin:20px;
+    height:40px;
+    width:40px;
+}
+
+
+
+
+
+
+
+
+
+
+
